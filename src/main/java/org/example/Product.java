@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * Represents a specific product and it's attributes
+ */
 public class Product {
     private final String itemCode;
     private final int unitPrice;

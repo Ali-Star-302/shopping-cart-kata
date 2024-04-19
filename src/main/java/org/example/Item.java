@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * Represents an item read in from a JSON file used for object mapping
+ */
 class Item {
     private String code;
     private int quantity;
@@ -8,15 +11,7 @@ class Item {
         return code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
-
     public int getQuantity() {
         return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 }

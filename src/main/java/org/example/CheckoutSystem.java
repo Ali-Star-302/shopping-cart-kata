@@ -2,20 +2,14 @@ package org.example;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.core.type.TypeReference;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
-
+/**
+ * This class handles the logic of storing products and the calculation of the subtotal for a given set of items
+ */
 public class CheckoutSystem {
     private HashMap<String, Product> productMap;
     private List<Item> items;
