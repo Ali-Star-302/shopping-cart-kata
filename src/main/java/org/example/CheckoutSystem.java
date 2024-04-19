@@ -46,10 +46,35 @@ public class CheckoutSystem {
     }
 
     public int calculateSubTotal() {
-        return 0;
+        int subtotal = 0;
+
+        for (Item item : items) {
+            Product currentProduct = productMap.get(item.getCode());
+            // Just add the regular price if the product doesn't have a special price
+            if (currentProduct.getSpecialPrice() == null) {
+                subtotal += item.getQuantity() * currentProduct.getUnitPrice();
+            }
+            else { //Special items
+                subtotal += calculateSpecialPrice(currentProduct, item.getQuantity());
+            }
+        }
+
+        return subtotal;
     }
 
-    public int calculateSpecialPrice() {
-        return 0;
+    private int calculateSpecialPrice(Product product, int quantity) {
+        int totalPrice = 0;
+        SpecialPrice specialPrice = product.getSpecialPrice();
+        int offerQuantity = specialPrice.getQuantity();
+        int offerPrice = specialPrice.getPrice();
+
+        if (quantity >= offerQuantity) {
+            int numSpecialItemGroups = (int) Math.floor(quantity / offerQuantity);
+            totalPrice += numSpecialItemGroups * offerPrice;
+            quantity -= numSpecialItemGroups * offerQuantity;
+        }
+        totalPrice += quantity * product.getUnitPrice();
+
+        return totalPrice;
     }
 }

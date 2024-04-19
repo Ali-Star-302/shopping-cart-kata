@@ -16,6 +16,7 @@ public class Main {
         checkoutSystem.addProduct(productD);
 
         checkoutSystem.consumeDataSource("/data-set-1.json");
-        checkoutSystem.printItems();
+
+        System.out.println(checkoutSystem.calculateSubTotal());
     }
 }
