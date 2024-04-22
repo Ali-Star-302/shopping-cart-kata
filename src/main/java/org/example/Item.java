@@ -1,7 +1,7 @@
 package org.example;
 
 /**
- * Represents an item read in from a JSON file used for object mapping
+ * Represents an item in the cart, read in from a JSON file used for object mapping
  */
 class Item {
     private String code;
