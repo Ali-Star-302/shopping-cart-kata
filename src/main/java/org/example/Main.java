@@ -1,8 +1,13 @@
 package org.example;
 
-
-
+/**
+ * The main class used to run the program
+ */
 public class Main {
+    /**
+     * The main method of the program
+     * @param args Command line arguments
+     */
     public static void main(String[] args) {
         CheckoutSystem checkoutSystem = new CheckoutSystem();
         checkoutSystem.addProduct(new Product("A", 50, new SpecialPrice(3, 140)));
@@ -12,6 +17,6 @@ public class Main {
 
         checkoutSystem.consumeDataSource("/data-set-1.json");
 
-        System.out.println(checkoutSystem.calculateSubTotal());
+        System.out.println("Cart sub total: " + checkoutSystem.calculateSubTotal());
     }
 }

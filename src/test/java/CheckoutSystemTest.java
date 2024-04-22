@@ -2,6 +2,9 @@ import org.example.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Contains all the unit tests used to test the system
+ */
 public class CheckoutSystemTest {
     /**
      * Test case: Calculate total without any special prices on products

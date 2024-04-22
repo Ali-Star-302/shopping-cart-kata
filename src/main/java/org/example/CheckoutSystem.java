@@ -9,12 +9,15 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * This class handles the logic of storing products and the calculation of the subtotal for a given set of items
+ * Handles the logic of storing products and the calculation of the subtotal for a given set of items
  */
 public class CheckoutSystem {
     private HashMap<String, Product> productMap;
     private List<Item> items;
 
+    /**
+     * Creates a CheckoutSystem object and instantiates its attributes
+     */
     public CheckoutSystem() {
         this.productMap = new HashMap<>();
         items = new ArrayList<>();
